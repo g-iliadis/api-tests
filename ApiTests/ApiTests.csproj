@@ -1,0 +1,52 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <Folder Include="ApiObjects\"/>
+        <Folder Include="Clients\"/>
+        <Folder Include="Config\"/>
+        <Folder Include="Context\"/>
+        <Folder Include="Features\"/>
+        <Folder Include="Features\"/>
+        <Folder Include="Fixtures\"/>
+        <Folder Include="Hooks\"/>
+        <Folder Include="Models\"/>
+        <Folder Include="Services\"/>
+        <Folder Include="StepDefinitions\"/>
+    </ItemGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.Extensions.Configuration" Version="9.0.6"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Binder" Version="9.0.6"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.EnvironmentVariables" Version="9.0.6"/>
+        <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="9.0.6"/>
+        <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="9.0.6"/>
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.14.1"/>
+        <PackageReference Include="Newtonsoft.Json" Version="13.0.3"/>
+        <PackageReference Include="NUnit" Version="4.3.2"/>
+        <PackageReference Include="NUnit3TestAdapter" Version="5.0.0"/>
+        <PackageReference Include="RestSharp" Version="112.1.0"/>
+        <PackageReference Include="Reqnroll" Version="2.4.1"/>
+        <PackageReference Include="Reqnroll.NUnit" Version="2.4.1"/>
+        <PackageReference Include="Reqnroll.Microsoft.Extensions.DependencyInjection" Version="2.4.1"/>
+    </ItemGroup>
+
+
+    <ItemGroup>
+        <None Update="appsettings.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="appsettings.*.json">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+        <None Update="Fixtures\**\*">
+            <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        </None>
+    </ItemGroup>
+
+</Project>
